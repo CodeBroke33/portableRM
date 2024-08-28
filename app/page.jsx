@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from 'react-icons/fi';
 
 //components
-import Social from "@/components/Social"
+import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats"; // Ensure Stats is imported
 
 const Home = () => {
   return (
@@ -17,7 +18,7 @@ const Home = () => {
               Hello I'm <br /> <span className="text-accent">Razien Mackenzie</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegent digital experiences and i am proficient in various programming languages and technologies.
+              I excel at crafting elegant digital experiences and am proficient in various programming languages and technologies.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
@@ -36,8 +37,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Stats /> {/* Ensure this is rendering properly */}
     </section>
   )
 }
 
-export default Home
+export default Home;
