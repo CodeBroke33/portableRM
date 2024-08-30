@@ -3,6 +3,7 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from 'next/image';
 import { CiMenuFries } from 'react-icons/ci';
 
 const links = [
@@ -14,7 +15,7 @@ const links = [
 ];
 
 const MobileNav = () => {
-  const pathname = usePathname(); // Get the current pathname
+  const pathname = usePathname();
 
   return (
     <Sheet>
@@ -23,10 +24,17 @@ const MobileNav = () => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* logo */}
-        <div className="mt-32 mb-20 text-center text-2xl">
+        {/* Reduced the top margin to move the content up */}
+        <div className="mt-16 mb-20 flex justify-center items-center">
           <Link href="/">
-            <h1 className="text-4xl font-semibold">
-              Razien <span className="text-accent">.</span>
+            <h1 className="text-4xl font-semibold flex justify-center items-center">
+              <Image 
+                src="/assets/Razien_Mackenzie_LOGO-removebg-preview.png"
+                alt="Razien Mackenzie Logo"
+                width={200} // Replace with actual width
+                height={100} // Replace with actual height
+                className="object-cover"
+              />
             </h1>
           </Link>
         </div>
